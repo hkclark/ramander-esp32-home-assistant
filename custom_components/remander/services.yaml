@@ -1,0 +1,49 @@
+set_mode:
+  name: Set mode
+  description: Switch the Remander device to away or home mode.
+  fields:
+    device_id:
+      name: Device ID
+      description: The Remander device_id (MAC, e.g. AA:BB:CC:DD:EE:FF).
+      required: true
+      selector:
+        text:
+    mode:
+      name: Mode
+      description: The target mode.
+      required: true
+      selector:
+        select:
+          options:
+            - away
+            - home
+
+pause:
+  name: Pause notifications
+  description: Pause Remander notifications using the device's default duration.
+  fields:
+    device_id:
+      name: Device ID
+      required: true
+      selector:
+        text:
+    duration_minutes:
+      name: Duration (minutes)
+      description: Pause window length.
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 1440
+          step: 1
+          unit_of_measurement: min
+
+rearm:
+  name: Rearm
+  description: Restore previously-paused notification schedules immediately.
+  fields:
+    device_id:
+      name: Device ID
+      required: true
+      selector:
+        text:
