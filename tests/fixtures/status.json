@@ -1,0 +1,13 @@
+{
+  "mode": "away",
+  "busy": null,
+  "ip": "192.168.1.42",
+  "rssi": -52,
+  "uptime_s": 12345,
+  "device_id": "AA:BB:CC:DD:EE:FF",
+  "model": "remander-esp32",
+  "firmware_version": "1.4.0",
+  "muted": false,
+  "mute_until": null,
+  "last_workflow": null
+}

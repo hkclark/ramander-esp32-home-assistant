@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Remander",
+        "description": "Enter the host or IP of your Remander device.",
+        "data": {
+          "host": "Host",
+          "password": "Password (optional)"
+        }
+      },
+      "discovery_confirm": {
+        "title": "Confirm Remander device",
+        "description": "Set up Remander ({device_id}) at {host}?"
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the device.",
+      "invalid_auth": "Invalid authentication."
+    },
+    "abort": {
+      "already_configured": "This Remander device is already configured.",
+      "not_remander": "Discovered device does not look like a Remander.",
+      "mismatched_device": "Discovered device ID does not match the device's reported ID."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "mode": { "name": "Mode" },
+      "last_workflow": { "name": "Last workflow" },
+      "uptime": { "name": "Uptime" }
+    },
+    "binary_sensor": {
+      "muted": { "name": "Muted" }
+    },
+    "button": {
+      "set_away": { "name": "Set away" },
+      "set_home": { "name": "Set home" },
+      "pause": { "name": "Pause" },
+      "rearm": { "name": "Rearm" }
+    }
+  }
+}
