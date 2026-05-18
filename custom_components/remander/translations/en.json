@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Remander",
+        "description": "Enter the host or IP of your Remander device. Leave the password blank unless you have enabled HTTP Basic authentication on the device.",
+        "data": {
+          "host": "Host",
+          "password": "Password (optional)"
+        }
+      },
+      "discovery_confirm": {
+        "title": "Set up Remander",
+        "description": "Add Remander device {device_id} at {host}? Home Assistant will register a webhook on the device so workflow events (away/home/pause, mode changes, mute) stream into HA in real time."
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the device.",
+      "invalid_auth": "Invalid authentication."
+    },
+    "abort": {
+      "already_configured": "This Remander device is already configured.",
+      "not_remander": "Discovered device does not look like a Remander.",
+      "mismatched_device": "Discovered device ID does not match the device's reported ID."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "mode": { "name": "Mode" },
+      "last_workflow": { "name": "Last workflow" },
+      "uptime": { "name": "Uptime" }
+    },
+    "binary_sensor": {
+      "muted": { "name": "Muted" }
+    },
+    "button": {
+      "set_away": { "name": "Set away" },
+      "set_home": { "name": "Set home" },
+      "pause": { "name": "Pause" },
+      "rearm": { "name": "Rearm" }
+    }
+  },
+  "services": {
+    "set_mode": {
+      "name": "Set mode",
+      "description": "Switch the Remander device to away or home mode.",
+      "fields": {
+        "device_id": {
+          "name": "Device ID",
+          "description": "The Remander device_id (MAC, e.g. AA:BB:CC:DD:EE:FF)."
+        },
+        "mode": {
+          "name": "Mode",
+          "description": "The target mode."
+        }
+      }
+    },
+    "pause": {
+      "name": "Pause notifications",
+      "description": "Pause Remander notifications using the device's default duration.",
+      "fields": {
+        "device_id": {
+          "name": "Device ID",
+          "description": "The Remander device_id."
+        },
+        "duration_minutes": {
+          "name": "Duration (minutes)",
+          "description": "Pause window length in minutes."
+        }
+      }
+    },
+    "rearm": {
+      "name": "Rearm",
+      "description": "Restore previously-paused notification schedules immediately.",
+      "fields": {
+        "device_id": {
+          "name": "Device ID",
+          "description": "The Remander device_id."
+        }
+      }
+    }
+  }
+}
