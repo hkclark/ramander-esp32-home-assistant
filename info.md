@@ -1,6 +1,6 @@
 # Remander
 
-Home Assistant integration for the [Remander ESP32](https://github.com/kclark/remander-esp32) Reolink NVR away/home-mode controller.
+Home Assistant integration for the [Remander ESP32](https://github.com/hkclark/remander-esp32) Reolink NVR away/home-mode controller.
 
 ## Features
 

@@ -1,6 +1,6 @@
 # Remander Home Assistant Integration
 
-A Home Assistant custom integration for the [Remander ESP32](https://github.com/kclark/remander-esp32) Reolink NVR away/home-mode controller.
+A Home Assistant custom integration for the [Remander ESP32](https://github.com/hkclark/remander-esp32) Reolink NVR away/home-mode controller.
 
 ## Features
 
@@ -21,7 +21,7 @@ A Home Assistant custom integration for the [Remander ESP32](https://github.com/
 
 ## Installation (HACS)
 
-1. In HACS, add this repository (`https://github.com/kclark/remander-esp32-home-assistant`) as a custom repository, category **Integration**.
+1. In HACS, add this repository (`https://github.com/hkclark/remander-esp32-home-assistant`) as a custom repository, category **Integration**.
 2. Install "Remander" from HACS.
 3. Restart Home Assistant.
 4. Settings → Devices & Services → Add Integration → "Remander".
